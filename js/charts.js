@@ -27,7 +27,7 @@ function passToGoogleMain(dataSet) {
 }
 
 function passToGoogleSpain(dataSet) {
-    console.log('spain' + dataSet);
+    
     // Load the Visualization API and the piechart package.
     google.charts.load('current', {'packages':['corechart']});
 
