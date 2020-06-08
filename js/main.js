@@ -1,4 +1,5 @@
-const csvURL = '../csv/EU-Covid19-Dataset.csv';
+const csvURL = 'https://opendata.ecdc.europa.eu/covid19/casedistribution/csv';
+//const csvURL = 'https://markstanden.github.io/Charts/csv/EU-Covid19-Dataset.csv';
 //const csvURL = '../csv/EU-Covid19-Dataset.csv';
 
 
