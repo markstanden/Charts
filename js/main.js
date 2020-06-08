@@ -83,9 +83,9 @@ function reduce(wholeDataSet) {
             
             // create the date string for each data entry.
             // This will be used as the object key when converted.
-            let year = dataRows.year.toString().padStart(4, "0")
-            let month = dataRows.month.toString().padStart(2, "0")
-            let day = dataRows.day.toString().padStart(2, "0")
+            let year = dataRows.year.toString().padStart(4, "0");
+            let month = dataRows.month.toString().padStart(2, "0");
+            let day = dataRows.day.toString().padStart(2, "0");
             let date = day + '/' + month + '/' + year;
                 
 
@@ -129,7 +129,7 @@ function sumByDate(individualReports) {
 
             // if the key doesn't exist yet, 
             // add a new one with the date as the key
-             dailySums[row[0]] = [row[1], row[2]]
+            dailySums[row[0]] = [row[1], row[2]];
         }
     });
 
