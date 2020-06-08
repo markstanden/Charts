@@ -148,12 +148,12 @@ function sumByDate(individualReports) {
                             dailySums[key][1],
                             ];
     });
-
+    console.log('pre sorted' + flatArray);
     //Sort the array into date order
     flatArray.sort(function(a, b) {
         return 1; // a first, then b
     });
-   
+    console.log('flat sorted' + flatArray);
 
     //add the header for google charts to read
     flatArray.unshift(['Date', 'UK', 'EU27']);
@@ -181,7 +181,7 @@ function dateSlice(dataSet, startDate, endDate) {
     
     // slice the array using the indices gained above
     let slicedArray = dataSet.slice(startIndex, (endIndex+1));
-
+    console.log('sliced nohead' + slicedArray);
     // We need to put the header back on for google charts to read
     slicedArray.unshift(['Date', 'UK', 'EU27']);
 
