@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Covid-19 Data Analysis</title>
+        <meta name="Covid-19 deaths" content="Corona Virus, Covid-19, Data Analysis" author='Mark Standen'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/chart.css">
+        
+    </head>
+    <body>
+
+        <div class='main_container'>
+
+            <section class='title_panel'>
+                <h1 class='title_title'>Have UK Covid-19 Deaths really overtaken the EU as a whole?</h1>
+                <h2 class="title_text">The Daily Mirror says so, Facebook too, but lets have a closer look...</h2>
+            </section> <!-- Title Panel -->
+
+            
+            <div class='desc_wrapper'>
+                <section class='desc_panel'>
+                    <h2 class='desc_title'>The charts show the Deaths from Covid-19 across the EU.</h2>
+                    <p class="desc_text">  I have created a sum total for all of the 27 EU states excluding the UK,
+                        and graphed this against the UK daily total.  I also wanted to create two break out charts showing the spanish adjustment to their count,
+                        and the rather shocking confirmation of the Daily Mirror article.</p>
+                </section> <!-- Desc Panel -->
+            </div> <!--desc_wrapper -->
+
+
+            <section class='main_chart_panel'>
+                <h2 class='main_chart_title'>The Overall Picture</h2>
+
+                <section class='main_chart_wrapper'>
+                    <div id="google_chart_main"></div>
+                </section> <!-- main chart wrapper -->
+
+                <p class="main_chart_text">Obviously, the EU is a rather large geographical area, with a huge population
+                    <a href='https://europa.eu/european-union/about-eu/figures/living_en)'>
+                        (446 million inhabitants - the world’s third largest population after China and India)
+                    </a>
+                    so it's unsurprising that the peak UK deaths were lower at the beginning of the pandemic
+                    <a href='https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2019'>
+                        (The UK population was estimated to be 66,796,807 in mid-2019.)
+                    </a>
+                    Although the drop off of the EU deaths is significantly steeper, which may be due to stricter lockdown measures.
+                </p>
+            </section> <!-- main chart Panel -->
+
+            <!-- DATA PANEL -->
+
+            <div class='data_wrapper'>
+                <section class='data_panel'>
+                    <h2 class='data_title'>Data from europa.eu - the EU's open data portal</h2>
+                    <p class="data_text">The EU makes getting hold of this data very easy, which was impressive.
+                        They provide CSV, JSON and XML, being up for a challenge I took the CSV over the JSON so I'd need to muck about with it a bit more.</p>
+                </section> <!-- Data Panel -->
+            </div> <!-- data_wrapper -->
+
+            <!-- SPANISH ADJUSTMENT NOTE PANEL -->
+
+            <div class='spain_panel_wrapper'>
+                <section class='spain_chart_panel'>
+
+                    <section class='spain_text_wrapper'>
+                        <h2 class='spain_chart_title'>Spanish Death Reporting Change</h2>
+                        <p class="spain_chart_text">On the 25/05/2020 Spain adjusted it's death reporting (hence the very negative EU figures).  
+                            I'm not sure what this really means for our data, whether the Spanish were previously over-reporting deaths, 
+                            or from this point on they are under-reporting...</p>
+                    </section> <!--spain_text_wrapper -->
+
+                    <section class='spain_chart_wrapper'>
+                        <div id="google_chart_spain"></div>
+                    </section> <!-- spain chart wrapper -->
+
+                </section> <!-- spain chart Panel -->
+            </div> <!-- spain panel wrapper -->
+
+            <!-- UK OVERTAKING EU PANEL -->
+            <div class='UK_panel_wrapper'>
+                <section class='UK_chart_panel'>
+                    
+                    <div class='UK_text_wrapper'>
+                        <h2 class='UK_chart_title'>
+                            UK Death Rate overtakes the EU as a whole!
+                        </h2>
+                        <p class="UK_chart_text">
+                            The shocking result that the Daily Mirror was correct, and that on the 2nd, 4th and 6th June, the UK daily deaths were indeed higher than the EU as a whole.
+                        </p>
+                    </div> <!-- UK text wrapper -->
+
+                    <section class='UK_chart_wrapper'>
+                        <div id="google_chart_UK"></div>
+                    </section> <!-- UK chart wrapper -->
+                   
+
+                </section> <!-- UK chart Panel -->
+            </div> <!-- UK_panel_wrapper -->
+
+            <section class='footer_wrapper'>
+                <p class='footer_text'>    
+                    Created as final assignment for <a href="https://onemonth.com">OneMonth JavaScript</a> - All content is my own, and I was merely tasked with creating a website that harnesses the the functionality of Google Charts.
+               </p>
+                
+                <p class='footer_text'>
+                    EU flag Image by <a href="https://pixabay.com/users/pixel2013-2364555/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2608475">S. Hermann &amp; F. Richter</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2608475">Pixabay</a>
+                </p>
+
+            </section> <!-- footer wrapper -->
+
+        </div> <!-- main_container -->
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!-- Google charts -->
+        <script type="text/javascript" src="./js/papaparse.min.js"></script> <!-- The script used to parse the CSV data from the EU data portal -->
+        <script type="text/javascript" src="./js/charts.js"></script> <!-- my application of google charts -->
+        <script type="text/javascript" src="./js/main.js"></script> <!-- the calls the required fuctions to reformat the data source and create the charts -->
+    </body>
+</html>
