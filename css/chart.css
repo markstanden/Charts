@@ -31,7 +31,8 @@ a {
     display: block;
     float: left;
     text-align: center;
-    color: indigo;
+    color: black;
+    background-color: whitesmoke;
 
     border-style: solid;
     border-width: 1px;
