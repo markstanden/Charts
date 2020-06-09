@@ -3,6 +3,7 @@ html {
     padding: 0;
     margin: 0;
     width: 100%;
+    background-color: rgb(201, 217, 248);
 }
 
 a {
@@ -11,7 +12,6 @@ a {
 }
 
 .main_container {
-    background-color: rgb(201, 217, 248);
     width: 100%;
     margin: 0;
     padding: 0;
@@ -22,19 +22,27 @@ a {
 ********************/
 
 .title_panel {
-    margin: 5rem, auto, 5rem, auto;
-    padding: 5rem, 20rem, 5rem, 20rem;
-    width: 100%;
+    
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     display: block;
     float: left;
     text-align: center;
     color: indigo;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: indigo;
+    border-radius: 0.15rem;
 }
 
 .title_title {
-    font-size: 4rem;
-    padding-left: 20%;
-    padding-right: 20%;
+    font-size: 3rem;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .title_text {
